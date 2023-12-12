@@ -23,7 +23,7 @@
 * Python
 
 ## 프로젝트 과정
-### 1주자
+### 1주차
 * Dadaah
 * ssh9871
 * birdteo
