@@ -10,18 +10,18 @@
 
 프로그래밍을 하다가 특정 기능이 필요할 경우에 튜토리얼을 참고할 수 있다.
 
-# Contributors
+## Contributors
 * Dadaah
 * ssh9871
 * birdteo
 * hayun22ing
 
 ## Language List
-
 * C
 * C++
 * Python
 
+추후에 개인이 활동한 내용 업데이트
 ## 프로젝트 과정
 ### 1주차
 * Dadaah
