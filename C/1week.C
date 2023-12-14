@@ -8,7 +8,7 @@ struct ListNode {
     struct ListNode* link;
 };
 
-// ³ëµå »ı¼º ÇÔ¼ö
+// ë…¸ë“œ ìƒì„± í•¨ìˆ˜
 struct ListNode* create_node(const char* name, int dist) {
     struct ListNode* new_node = (struct ListNode*)malloc(sizeof(struct ListNode));
     strcpy(new_node->data, name);
@@ -17,7 +17,7 @@ struct ListNode* create_node(const char* name, int dist) {
     return new_node;
 }
 
-// ³ëµå »ğÀÔ ÇÔ¼ö
+// ë…¸ë“œ ì‚½ì… í•¨ìˆ˜
 void insert_node(struct ListNode** head, struct ListNode* prev, struct ListNode* new_node, int new_dist) {
     if (prev != NULL) {
         new_node->dist = new_dist;
@@ -30,7 +30,7 @@ void insert_node(struct ListNode** head, struct ListNode* prev, struct ListNode*
     }
 }
 
-// ³ëµå »èÁ¦ ÇÔ¼ö
+// ë…¸ë“œ ì‚­ì œ í•¨ìˆ˜
 void remove_node(struct ListNode** head, struct ListNode* prev, struct ListNode* to_remove, int new_dist) {
     if (prev != NULL) {
         prev->link = to_remove->link;
@@ -42,7 +42,7 @@ void remove_node(struct ListNode** head, struct ListNode* prev, struct ListNode*
     }
 }
 
-// ¿ª ÀÌ¸§À¸·Î ³ëµå °Ë»ö ÇÔ¼ö
+// ì—­ ì´ë¦„ìœ¼ë¡œ ë…¸ë“œ ê²€ìƒ‰ í•¨ìˆ˜
 struct ListNode* search(struct ListNode* head, const char* name) {
     struct ListNode* current = head;
     while (current != NULL) {
@@ -54,7 +54,7 @@ struct ListNode* search(struct ListNode* head, const char* name) {
     return NULL;
 }
 
-// Ãâ¹ß¿ªºÎÅÍ µµÂø¿ª±îÁöÀÇ ÃÑ ½Ã°£ Ãâ·Â ÇÔ¼ö
+// ì¶œë°œì—­ë¶€í„° ë„ì°©ì—­ê¹Œì§€ì˜ ì´ ì‹œê°„ ì¶œë ¥ í•¨ìˆ˜
 void Time(struct ListNode* head, struct ListNode* start, struct ListNode* end) {
     int total_time = 0;
     struct ListNode* current = start;
@@ -65,55 +65,55 @@ void Time(struct ListNode* head, struct ListNode* start, struct ListNode* end) {
     printf("Total time from %s to %s: %d minutes\n", start->data, end->data, total_time);
 }
 
-// ÀüÃ¼ ³ë¼± Ãâ·Â ÇÔ¼ö
+// ì „ì²´ ë…¸ì„  ì¶œë ¥ í•¨ìˆ˜
 void display(struct ListNode* head) {
     struct ListNode* current = head;
     while (current != NULL) {
-        printf("%s-(%dºĞ)->", current->data, current->dist);
+        printf("%s-(%dë¶„)->", current->data, current->dist);
         current = current->link;
     }
-    printf("³¡\n");
+    printf("ë\n");
 }
 
 int main() {
     struct ListNode* subway = NULL;
 
-    // ÃÊ±â ÁöÇÏÃ¶ ³ë¼± ¼³Á¤
-    struct ListNode* jeju_airport = create_node("Á¦ÁÖ°øÇ×¿ª", 20);
-    struct ListNode* aewol = create_node("¾Ö¿ù¿ª", 40);
-    struct ListNode* seogwipo = create_node("¼­±ÍÆ÷¿ª", 30);
-    struct ListNode* seongsan = create_node("¼º»ê¿ª", 30);
+    // ì´ˆê¸° ì§€í•˜ì²  ë…¸ì„  ì„¤ì •
+    struct ListNode* jeju_airport = create_node("ì œì£¼ê³µí•­ì—­", 20);
+    struct ListNode* aewol = create_node("ì• ì›”ì—­", 40);
+    struct ListNode* seogwipo = create_node("ì„œê·€í¬ì—­", 30);
+    struct ListNode* seongsan = create_node("ì„±ì‚°ì—­", 30);
 
     subway = jeju_airport;
     jeju_airport->link = aewol;
     aewol->link = seogwipo;
     seogwipo->link = seongsan;
 
-    // ÃÊ±â ³ë¼± Ãâ·Â
+    // ì´ˆê¸° ë…¸ì„  ì¶œë ¥
     printf("Initial Subway Route:\n");
     display(subway);
 
-    // ¾Ö¿ù¿ª¿¡¼­ ¼º»ê¿ª±îÁöÀÇ ¼Ò¿ä½Ã°£ Ãâ·Â
+    // ì• ì›”ì—­ì—ì„œ ì„±ì‚°ì—­ê¹Œì§€ì˜ ì†Œìš”ì‹œê°„ ì¶œë ¥
     Time(subway, aewol, seongsan);
 
-    // ¸ğ½½Æ÷¿ª »ğÀÔ
-    struct ListNode* moseulpo = create_node("¸ğ½½Æ÷¿ª", 30);
-    struct ListNode* prev = search(subway, "¾Ö¿ù¿ª");
+    // ëª¨ìŠ¬í¬ì—­ ì‚½ì…
+    struct ListNode* moseulpo = create_node("ëª¨ìŠ¬í¬ì—­", 30);
+    struct ListNode* prev = search(subway, "ì• ì›”ì—­");
     insert_node(&subway, prev, moseulpo, 30);
 
-    // ³ë¼± ¾÷µ¥ÀÌÆ® ÈÄ Ãâ·Â
+    // ë…¸ì„  ì—…ë°ì´íŠ¸ í›„ ì¶œë ¥
     printf("Subway Route After Inserting Moseulpo Station:\n");
     display(subway);
 
-    // ¾Ö¿ù¿ª¿¡¼­ ¼º»ê¿ª±îÁöÀÇ ¼Ò¿ä½Ã°£ Ãâ·Â
+    // ì• ì›”ì—­ì—ì„œ ì„±ì‚°ì—­ê¹Œì§€ì˜ ì†Œìš”ì‹œê°„ ì¶œë ¥
     Time(subway, aewol, seongsan);
 
-    // ¸ğ½½Æ÷¿ª Á¦°Å
-    prev = search(subway, "¾Ö¿ù¿ª");
-    struct ListNode* to_remove = search(subway, "¸ğ½½Æ÷¿ª");
+    // ëª¨ìŠ¬í¬ì—­ ì œê±°
+    prev = search(subway, "ì• ì›”ì—­");
+    struct ListNode* to_remove = search(subway, "ëª¨ìŠ¬í¬ì—­");
     remove_node(&subway, prev, to_remove, 40);
 
-    // ³ë¼± ¾÷µ¥ÀÌÆ® ÈÄ Ãâ·Â
+    // ë…¸ì„  ì—…ë°ì´íŠ¸ í›„ ì¶œë ¥
     printf("Subway Route After Removing Moseulpo Station:\n");
     display(subway);
 
