@@ -3,11 +3,11 @@
 
 int main() {
     double length, width;
-    printf("Á÷»ç°¢Çü µÎ º¯ÀÇ ±æÀÌ ÀÔ·Â: ");
+    printf("ì§ì‚¬ê°í˜• ë‘ ë³€ì˜ ê¸¸ì´ ì…ë ¥: ");
     scanf_s("%lf %lf", &length, &width);
 
     double happy = calculate(length, width);
-    printf("Á÷»ç°¢Çü µÑ·¹: %.2f", happy);
+    printf("ì§ì‚¬ê°í˜• ë‘˜ë ˆ: %.2f", happy);
 
     return 0;
 }
