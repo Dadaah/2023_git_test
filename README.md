@@ -26,17 +26,40 @@
 ### 1주차
 * Dadaah
 * ssh9871
+  판다스 소개, 설치
+  판다스의 자료형 설명
+  Series, DataFrame
+  데이터 보기
+
 * birdteo
 * hayun22ing
   
 ### 2주차
 * Dadaah
 * ssh9871
+  데이터 선택 방법, loc, iloc등
+  논리형 인덱싱
+  결측 데이터 설명과 처리방법
+
 * birdteo
 * hayun22ing
   
 ### 3주차
 * Dadaah
 * ssh9871
+  데이터프레임 연산
+  데이트프레임 병합, merge, SQL식 join
+  데이터프레임 그룹핑, grouping
+  
+* birdteo
+* hayun22ing
+
+### 4주차
+* Dadaah
+* ssh9871
+  판다스 범주형 데이터
+  데이터프레임 plotting
+  데이터 입출력, csv파일, excel파일
+
 * birdteo
 * hayun22ing
