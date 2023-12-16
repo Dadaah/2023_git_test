@@ -62,7 +62,8 @@ ts = ts.cumsum()
 
 ts.plot();
 ```
-![Alt text](plot.png)
+![Alt text](plot.png)  
+
 `plot()`을 사용하여 모든 열들을 그래프로 보여줄 수 있다.  
 
 Jupyter를 사용할 때는 plot()을 사용하면 되지만, 다른 경우에는 `matplotlib.pyplot.show`를 사용해 보여주거나 `matplotlib.pyplot.savefig`를 사용해 파일에 저장한다.
