@@ -26,10 +26,15 @@
 ### 1주차
 * Dadaah
 * ssh9871
+  
   판다스 소개, 설치
+  
   판다스의 자료형 설명
+  
   Series, DataFrame
+  
   데이터 보기
+  
 
 * birdteo
 * hayun22ing
