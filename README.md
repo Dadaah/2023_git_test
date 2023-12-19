@@ -42,6 +42,7 @@
 * birdteo
   
   C Hello world 출력하기
+  
 * hayun22ing
   
 ### 2주차
