@@ -103,6 +103,6 @@
   
 
 * birdteo
-   C array[10]에 입력된 짝수 혹수 개수 세기
+   C array[10]에 입력된 짝수, 홀수 개수 세기
 * hayun22ing
 
