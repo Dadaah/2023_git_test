@@ -40,8 +40,7 @@
   
 
 * birdteo
-  
-  C Hello world 출력하기
+  <br/> C Hello world 출력하기
   
 * hayun22ing
   
@@ -60,7 +59,7 @@
   
 
 * birdteo
- C 지하철 노선을 관리하는 간단한 프로그램을 구현
+ <br/>C 지하철 노선을 관리하는 간단한 프로그램을 구현
   
 * hayun22ing
   
@@ -79,7 +78,7 @@
   
   
 * birdteo
-  C 직사각형 두변 길이 입력받아서 둘레 출력하기
+  <br/>C 직사각형 두변 길이 입력받아서 둘레 출력하기
 * hayun22ing
 
 ### 4주차
@@ -103,6 +102,6 @@
   
 
 * birdteo
-   C array[10]에 입력된 짝수, 홀수 개수 세기
+  <br/>C array[10]에 입력된 짝수, 홀수 개수 세기
 * hayun22ing
 
